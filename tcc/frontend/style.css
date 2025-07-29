@@ -1,0 +1,202 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #0d7e38;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .status span {
+    margin-left: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Banner */
+  .banner img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Campo de busca */
+  .busca {
+    padding: 1rem;
+    text-align: center;
+    background-color: white;
+  }
+  
+  .busca input {
+    width: 90%;
+    max-width: 500px;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+  }
+  
+  /* Categorias */
+  .categorias {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    background: white;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .categorias button {
+    background: #eee;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+  
+  .categorias button:hover {
+    background-color: #ccc;
+  }
+  
+  .categorias button.ativa {
+    background-color: #d62828;
+    color: white;
+  }
+  
+  /* Produtos */
+  .produtos-container {
+    max-width: 1200px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem;
+  }
+  
+  .produto-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s;
+  }
+  
+  .produto-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .produto-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .produto-content {
+    padding: 1rem;
+  }
+  
+  .produto-nome {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .produto-desc {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.4rem 0;
+  }
+  
+  .produto-preco {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #d62828;
+  }
+  
+  /* Rodapé / Sacola */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #d62828;
+    color: white;
+    z-index: 100;
+  }
+  
+  .sacola {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .sacola button {
+    background: white;
+    color: #d62828;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /* Responsivo para mobile */
+  @media (max-width: 600px) {
+    .produtos-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .header-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .status span {
+      display: block;
+      margin: 0.3rem 0;
+    }
+  
+    .sacola {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .busca input {
+      width: 100%;
+    }
+  }
+  
